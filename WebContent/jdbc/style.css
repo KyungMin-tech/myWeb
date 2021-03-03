@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+body,td,select,div,form { font-size: 9px; color: #000; line-height: 160%; }
+textarea, input { border: 1px solid #999; font-size: 9px; color: #000; background-color: #fff; }
+a:link { text-decoration: none; color: #696969; }
+a:hover { text-decoration: yes; color: #66ccff; }
+a:visited { text-decoration: none; color: #330066; }
