@@ -1,7 +1,7 @@
 <%
-	String bodyback_c = "#e0ffff";
-	String back_c = "#8fbc8f";
-	String title_c = "#5f9ea0";
-	String value_c = "#b0e0e6";
-	String bar = "#778899";
+	String bodyback_c = "#FFBF00";
+	String back_c = "#e0ffff";
+	String title_c = "#B18904";
+	String value_c = "#F7FE2E";
+	String bar = "#886A08";
 %>
