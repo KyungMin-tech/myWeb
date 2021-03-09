@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>게시판</title>
 <link href="style.css" type="text/css" rel="stylesheet">
 <script type="text/javascript">
 <!--
@@ -18,7 +19,6 @@
 	}
 //-->
 </script>
-<title>게시판</title>
 </head>
 <body bgcolor="${bodyback_c}">
 <center><b>글삭제</b>
@@ -30,8 +30,7 @@
 				<b>비밀번호를 입력해주세요.</b></td>
 		</tr>
 		<tr height="30">
-			<td align="center">
-				비밀번호 :
+			<td align="center">비밀번호 :
 				<input type="password" name="pass" size="8" maxlength="12">
 				<input type="hidden" name="num" value="${num}"></td>
 		</tr>

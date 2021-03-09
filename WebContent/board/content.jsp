@@ -37,7 +37,7 @@
 			<td colspan="4" bgcolor="${value_c}" align="right">
 				<input type="button" value="글수정" onclick="document.location.href='/myWeb/board/updateForm.do?num=${article.num}&pageNum=${pageNum}'">&nbsp;&nbsp;&nbsp;&nbsp;
 				<input type="button" value="글삭제" onclick="document.location.href='/myWeb/board/deleteForm.do?num=${article.num}&pageNum=${pageNum}'">&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="button" value="답글쓰기" onclick="document.location.href='/myWeb/board/writeForm.do?num=${article.num}&ref=${ref}&step=${step}&depth=${depth}'">&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" value="답글쓰기" onclick="document.location.href='/myWeb/board/writeForm.do?num=${article.num}&ref=${article.ref}&step=${article.step}&depth=${article.depth}'">&nbsp;&nbsp;&nbsp;&nbsp;
 				<input type="button" value="글목록" onclick="document.location.href='/myWeb/board/list.do?pageNum=${pageNum}'">
 			</td>
 		</tr>

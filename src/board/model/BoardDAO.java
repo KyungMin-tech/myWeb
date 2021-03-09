@@ -48,9 +48,7 @@ public class BoardDAO {
 		List<BoardVO> articleList = null;
 		try {
 			conn = ConnUtil.getConnection();
-			pstmt = conn.prepareStatement("select * from (select rownum rnum, "
-					+ "num, writer, email, subject, pass, regdate, readcount, ref, step, depth, content, "
-					+ "ip from (select * from board order by ref desc, step asc)) where rnum>=? and rnum<=?");
+			pstmt = conn.prepareStatement("select * from(select rownum rnum, num, writer, email, subject, pass, regdate, readcount, ref, step, depth, content, ip from (select * from board order by ref desc, step asc)) where rnum >= ? and rnum <= ?");
 			pstmt.setInt(1, start);
 			pstmt.setInt(2, end);
 			rs = pstmt.executeQuery();
@@ -102,7 +100,7 @@ public class BoardDAO {
 			else
 				number = 1;
 			if(num != 0) {//답변글일 경우
-				sql = "update board set step=step+1 where ref= ? and step> ?";
+				sql = "update board set step=step+1 where ref= ? and step > ?";
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setInt(1, ref);
 				pstmt.setInt(2, step);
@@ -114,9 +112,7 @@ public class BoardDAO {
 				step = 0;
 				depth = 0;
 			}//쿼리를 작성
-			sql = "insert into board(num, writer, email, subject, pass, "
-					+ "regdate, ref, step, depth, content, ip) "
-					+ "values(board_seq.nextval,?,?,?,?,?,?,?,?,?,?)";
+			sql = "insert into board(num, writer, email, subject, pass, regdate, ref, step, depth, content, ip) values(board_seq.nextval,?,?,?,?,?,?,?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, article.getWriter());
 			pstmt.setString(2, article.getEmail());
